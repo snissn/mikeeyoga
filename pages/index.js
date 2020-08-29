@@ -36,7 +36,7 @@ let youtube = fetch("https://thingproxy.freeboard.io/fetch/https://www.youtube.c
   <Layout>
     <section className="section">
       <div className="container has-text-centered">
-        <p><img  src="/public/Hello.png" /></p>
+        <p><img  src="/Hello.png" /></p>
         <h1 className="title">Hello from Mikee</h1> 
 
 
