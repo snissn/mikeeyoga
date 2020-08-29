@@ -26,11 +26,7 @@ export default ({ children }) => {
             <a className="navbar-item">
               Mikee Yoga
             </a>
-       
-       
-          </div>
-          <div id="navbarmenu" className="navbar-menu">
-            <div className="navbar-start">
+        
               <Link prefetch href="/">
                 <a className="navbar-item">Home</a>
               </Link>
@@ -41,8 +37,8 @@ export default ({ children }) => {
                 <a className="navbar-item">About</a>
               </Link>
             </div>
-    
-          </div>
+       
+
         </nav>
       </header>
       {children}
