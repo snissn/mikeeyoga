@@ -1,4 +1,5 @@
 import Layout from '../components/layout'
+import YT from '../components/yt'
 var parseString = require('xml2js').parseString;
 
 
@@ -24,35 +25,33 @@ async function getVideoProps(videoId){
 }
 
  
- function Index({video}){
+ function Youtube({feed}){
  
-   
-  console.log(video);
-   const videoUrl = 'https://www.youtube-nocookie.com/embed/'+video['yt:videoId'];
-   console.log(video);
-  return (
+   return (
   <Layout>
     <section className="section">
-      <div className="container has-text-centered">
-      <h1 className="title">Hello I'm Mikee</h1> 
-
-        <p><img  src="/Hello.png" /></p>
-
-
-
-
-         
-      </div>
-    </section>
-    <section className="section bottom">
-      <div className="container has-text-centered">
-    <p className="video" >
         
-        <iframe width={video.data.thumbnail_width} style={{height:video.data.thumbnail_height,width:video.data.thumbnail_width}} height={video.data.thumbnail_height} src={videoUrl} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      <div className="container has-text-centered ">
+          <div className="column"> 
+        {feed.map((video, index) => {
+            console.log(video)
+
+            const thumbnailUrl = 'https://i.ytimg.com/vi/'+video['yt:videoId']+'/hqdefault.jpg'
+            return(
+    
+
+                    <YT video={video} />
         
-        </p>
-        <p><h1 className="title">My latest yoga video</h1></p>
+
+            )
+
+        })}    
+   </div>
+
+
+
         
+
          
       </div>
     </section>
@@ -63,9 +62,6 @@ async function getVideoProps(videoId){
         section {
           background: #24589f;
           
-        }
-        .section.bottom{
-          background:#1d2110;
         }
         .card{ }
         h1{
@@ -84,7 +80,7 @@ async function getVideoProps(videoId){
 
       }
 
-      Index.getInitialProps = async ctx => {
+      Youtube.getInitialProps = async ctx => {
         let youtube;
         
          youtube = await fetch("https://bold-meadow-4a42.mike4921.workers.dev/?https://www.youtube.com/feeds/videos.xml?channel_id=UC5wC5_0J9Qa6MxXoI8DPUAg")
@@ -97,13 +93,7 @@ async function getVideoProps(videoId){
           //console.dir((feed));
       });
       const feed = x['feed']['entry']
-      var video = feed[0];
-   
-      var data = await getVideoProps(feed[0]['yt:videoId'])
-      console.log('data');
-      video['data'] = data;
-      console.log(data);
-   
-        return {video}
-      }
-      export default Index;
+      console.log(feed);
+      return {feed}
+          }
+      export default Youtube;

@@ -34,6 +34,9 @@ export default ({ children }) => {
               <Link prefetch href="/">
                 <a className="navbar-item">Home</a>
               </Link>
+              <Link prefetch href="/youtube">
+                <a className="navbar-item">Youtube Classes</a>
+              </Link>
               <Link prefetch href="/about">
                 <a className="navbar-item">About</a>
               </Link>
