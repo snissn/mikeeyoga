@@ -21,6 +21,7 @@
     "react-dom": "^16.8.6",
     "swr": "^0.3.1",
     "unfetch": "^4.1.0",
-    "xml2js": "^0.4.23"
+    "xml2js": "^0.4.23",
+    "youtube-embed-video": "^1.2.1"
   }
 }
