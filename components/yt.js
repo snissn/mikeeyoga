@@ -4,8 +4,7 @@ function YT({video}){
     const thumbnailUrl = 'https://i.ytimg.com/vi/'+video['yt:videoId']+'/hqdefault.jpg'
     const linkUrl = 'https://www.youtube.com/watch?v='+video['yt:videoId']
   
-console.log(video);
-    return (
+     return (
         <div className="is-widescreen section container column is-half">
         <div className="card ">
         <div className="card-image">

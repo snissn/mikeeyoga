@@ -36,7 +36,6 @@ async function getVideoProps(videoId){
         {feed.map((video, index) => {
             console.log(video)
 
-            const thumbnailUrl = 'https://i.ytimg.com/vi/'+video['yt:videoId']+'/hqdefault.jpg'
             return(
     
 
@@ -93,7 +92,6 @@ async function getVideoProps(videoId){
           //console.dir((feed));
       });
       const feed = x['feed']['entry']
-      console.log(feed);
-      return {feed}
+       return {feed}
           }
       export default Youtube;
