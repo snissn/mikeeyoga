@@ -1,6 +1,7 @@
 import Layout from '../components/layout'
 var parseString = require('xml2js').parseString;
 
+import useSWR from 'swr'
 
 import "isomorphic-fetch"
 
@@ -15,9 +16,18 @@ async function xml2json(xml) {
 
   });
 }
+async function swfFetchYoutube(url){
+  let youtube = await fetch(url)
+  let xml = await youtube.text();
+  var x = await xml2json(xml);
+  const feed = x['feed']['entry']
+  var video = feed[0];
+  var data = await getVideoProps(feed[0]['yt:videoId'])
+  video['data'] = data;
+  return video
+}
 
 async function getVideoProps(videoId){
-
   const youtube = await fetch("https://bold-meadow-4a42.mike4921.workers.dev/?https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v="+videoId+"&format=json")
   var data = await youtube.json()
   return data;
@@ -25,12 +35,15 @@ async function getVideoProps(videoId){
 
  
  function Index({video}){
- 
-   
-  console.log(video);
-   const videoUrl = 'https://www.youtube-nocookie.com/embed/'+video['yt:videoId'];
-   console.log(video);
-  return (
+  const { data, error } = useSWR("https://bold-meadow-4a42.mike4921.workers.dev/?https://www.youtube.com/feeds/videos.xml?channel_id=UC5wC5_0J9Qa6MxXoI8DPUAg", swfFetchYoutube)
+  //make sure data is updated each time
+  let videoUrl;
+  if(data){    
+     videoUrl = 'https://www.youtube-nocookie.com/embed/'+data['yt:videoId'];
+  }else{
+     videoUrl = 'https://www.youtube-nocookie.com/embed/'+video['yt:videoId'];
+  }
+   return (
   <Layout>
     <section className="section">
       <div className="container has-text-centered">
@@ -92,16 +105,12 @@ async function getVideoProps(videoId){
         
         let xml = await youtube.text();
         var x = await xml2json(xml);
-         parseString(xml, { explicitArray : false, ignoreAttrs : true },function (err, result) {
-          const feed = result['feed']['entry']
-          //console.dir((feed));
-      });
+ 
       const feed = x['feed']['entry']
       var video = feed[0];
    
       var data = await getVideoProps(feed[0]['yt:videoId'])
-      console.log('data');
-      video['data'] = data;
+       video['data'] = data;
       console.log(data);
    
         return {video}
