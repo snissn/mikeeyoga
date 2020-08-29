@@ -18,7 +18,7 @@ async function xml2json(xml) {
 
 
 
-let youtube = fetch("https://cors-anywhere.herokuapp.com/https://www.youtube.com/feeds/videos.xml?channel_id=UC5wC5_0J9Qa6MxXoI8DPUAg").then(res=>{
+let youtube = fetch("https://thingproxy.freeboard.io/fetch/https://www.youtube.com/feeds/videos.xml?channel_id=UC5wC5_0J9Qa6MxXoI8DPUAg").then(res=>{
   res.text().then((xml,b)=>{
     parseString(xml, { explicitArray : false, ignoreAttrs : true },function (err, result) {
       const feed = result['feed']['entry']
