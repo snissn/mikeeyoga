@@ -28,7 +28,10 @@ export default ({ children }) => {
         <nav className="navbar " role="navigation" aria-label="main navigation">
           <div className="navbar-brand">
             <a className="navbar-item">
-              <img src="/logo.png" style={{ height: "120px" }} />
+              <img
+                src="/logo.png"
+                style={{ height: "120px !important", maxHeight: "120px" }}
+              />
             </a>
 
             <Link prefetch href="/">
