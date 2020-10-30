@@ -4,13 +4,14 @@ export default (props) => (
     <header>
         <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
-                <a className="navbar-item">
-                    <img
-                        src="/logo.png"
-                        style={{ height: "120px !important", maxHeight: "120px" }}
-                    />
-                </a>
-
+                <Link href="/">
+                    <a className="navbar-item">
+                        <img
+                            src="/logo.png"
+                            style={{ height: "120px !important", maxHeight: "120px" }}
+                        />
+                    </a>
+                </Link>
                 <Link href="/">
                     <a className="navbar-item">Home</a>
                 </Link>
