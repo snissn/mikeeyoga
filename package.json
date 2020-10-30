@@ -24,6 +24,7 @@
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-responsive-carousel": "^3.2.10",
     "swr": "^0.3.1",
     "unfetch": "^4.1.0",
     "xml2js": "^0.4.23",

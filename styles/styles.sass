@@ -1,15 +1,20 @@
 // We can import bulma into the project using Sass.
-$navbar-height : 8rem;
-$navbar-background-color : #14141c;
-$navbar-item-color : #fff;
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP");
 
-$card-background-color	: #14141c;
-$card-color : white;
-$subtitle-strong-color : white;
-
-$navbar-item-hover-color	: white;
-$navbar-item-hover-background-color	: #444;
-
-$footer-background-color	: #ff9d9b;
+$family-primary: "Noto Sans JP";
 
 @import "../node_modules/bulma/bulma.sass"
+
+.carousel-root
+    max-width: 600px
+    margin: 0 auto
+
+
+body
+    display: flex
+    min-height: 100vh
+    flex-direction: column
+    
+#wrapper 
+        flex: 1
+      
