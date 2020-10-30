@@ -35,12 +35,8 @@ export default (props) => {
                 <div id="navbarBasicExample" className={"navbar-menu " + toggleclass} >
                     <div className="navbar-start">
 
-                        <Link href="/">
-                            <a className="navbar-item">Home</a>
-                        </Link>
-
                         <Link href="/schedule">
-                            <a className="navbar-item">Schedule</a>
+                            <a className="   navbar-item">Schedule</a>
                         </Link>
                         <Link href="/youtube">
                             <a className="navbar-item">Youtube Classes</a>

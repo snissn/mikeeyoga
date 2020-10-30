@@ -8,7 +8,8 @@ function MyApp({ Component, pageProps }) {
         <body>
             <div id="wrapper">
 
-                <Nav></Nav>
+                <Nav>          
+                         </Nav>
                 <Component {...pageProps} />
             </div>
             <footer className="footer">
@@ -33,34 +34,53 @@ function MyApp({ Component, pageProps }) {
                         <button className="button   is-link ">
                             <span className="icon">
                                 <i className="fab fa-youtube" />
-                            </span>{" "}
-                            <a
+                            </span>
+                                                        <a
                                 href="https://www.youtube.com/channel/UC5wC5_0J9Qa6MxXoI8DPUAg" style={{ color: "white" }}
                             >
                                 Follow @MikeeYoga on Youtube
               </a>
+                        </button></p>
+                        <p>
+                        <button className="button   is-link ">
+
+                        <Link href="/schedule">
+                            <a className="navbar-item has-text-white">Schedule</a>
+                        </Link>
                         </button>
-                    </p>
+                        </p>
+                        <p>
+                        <button className="button   is-link ">
 
-                    <Link href="/">
-                        <a className="navbar-item">Home</a>
-                    </Link>
 
-                    <Link href="/schedule">
-                        <a className="navbar-item">Schedule</a>
-                    </Link>
-                    <Link href="/youtube">
-                        <a className="navbar-item">Youtube Classes</a>
-                    </Link>
-                    <Link href="/events">
-                        <a className="navbar-item">Events</a>
-                    </Link>
-                    <Link href="/bio">
-                        <a className="navbar-item">Bio</a>
-                    </Link>
-                    <Link href="/contact">
-                        <a className="navbar-item">Contact Mikee</a>
-                    </Link>
+                        <Link href="/youtube">
+                            <a className="navbar-item has-text-white">Youtube Classes</a>
+                        </Link>
+                        </button>
+                        </p>
+                        <p>
+                        <button className="button   is-link ">
+
+                        <Link href="/events">
+                            <a className="navbar-item has-text-white">Events</a>
+                        </Link>
+                        </button>
+                        </p>
+                        <p>
+                        <button className="button   is-link ">
+
+                        <Link href="/bio">
+                            <a className="navbar-item has-text-white">Bio</a>
+                        </Link>
+                        </button>
+                        </p><p>
+                        <button className="button   is-link ">
+
+                        <Link href="/contact">
+                            <a className="navbar-item has-text-white">Contact Mikee</a>
+                        </Link>
+                        </button>                    
+                        </p>
                 </div>
             </footer>
         </body>
