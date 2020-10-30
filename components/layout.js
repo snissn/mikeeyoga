@@ -17,45 +17,11 @@ export default ({ children }) => {
       <Head>
         <title>Mikee Yoga</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link
-          rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-        />
+
       </Head>
 
       {children}
-      <footer className="footer">
-        <div className="content has-text-centered">
-          <p>
-            <strong>Mikee</strong> is a Yoga teacher based in Brooklyn, NY.
-          </p>
-          <p>
-            <button className="button   is-link ">
-              <span className="icon">
-                <i className="fab fa-instagram" />
-              </span>{" "}
-              <a
-                href="https://instagram.com/MikeeYoga"
-                style={{ color: "white" }}
-              >
-                Follow @MikeeYoga on Instagram
-              </a>
-            </button>
-            <br />
-            <br />
-            <button className="button   is-link ">
-              <span className="icon">
-                <i className="fab fa-youtube" />
-              </span>{" "}
-              <a
-                href="https://www.youtube.com/channel/UC5wC5_0J9Qa6MxXoI8DPUAg" style={{ color: "white" }}
-              >
-                Follow @MikeeYoga on Youtube
-              </a>
-            </button>
-          </p>
-        </div>
-      </footer>
+
     </div>
   );
 };

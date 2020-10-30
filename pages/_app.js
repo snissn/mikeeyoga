@@ -1,6 +1,7 @@
 import Nav from "../components/Nav.js";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import "../styles/styles.sass";
+import Link from "next/link";
 
 function MyApp({ Component, pageProps }) {
     return (
@@ -40,6 +41,26 @@ function MyApp({ Component, pageProps }) {
               </a>
                         </button>
                     </p>
+
+                    <Link href="/">
+                        <a className="navbar-item">Home</a>
+                    </Link>
+
+                    <Link href="/schedule">
+                        <a className="navbar-item">Schedule</a>
+                    </Link>
+                    <Link href="/youtube">
+                        <a className="navbar-item">Youtube Classes</a>
+                    </Link>
+                    <Link href="/events">
+                        <a className="navbar-item">Events</a>
+                    </Link>
+                    <Link href="/bio">
+                        <a className="navbar-item">Bio</a>
+                    </Link>
+                    <Link href="/contact">
+                        <a className="navbar-item">Contact Mikee</a>
+                    </Link>
                 </div>
             </footer>
         </body>
