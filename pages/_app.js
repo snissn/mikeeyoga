@@ -41,36 +41,41 @@ function MyApp({ Component, pageProps }) {
                 Follow @MikeeYoga on Youtube
               </a>
             </button>
-          </p>
-          <p>
+            <br />
+            <br />
+
             <button className="button   is-link ">
               <Link href="/schedule">
                 <a className="navbar-item has-text-white">Schedule</a>
               </Link>
             </button>
-          </p>
-          <p>
+            <br />
+            <br />
+
             <button className="button   is-link ">
               <Link href="/youtube">
                 <a className="navbar-item has-text-white">Youtube Classes</a>
               </Link>
             </button>
-          </p>
-          <p>
+            <br />
+            <br />
+
             <button className="button   is-link ">
               <Link href="/events">
                 <a className="navbar-item has-text-white">Events</a>
               </Link>
             </button>
-          </p>
-          <p>
+            <br />
+            <br />
+
             <button className="button   is-link ">
               <Link href="/bio">
                 <a className="navbar-item has-text-white">Bio</a>
               </Link>
             </button>
-          </p>
-          <p>
+            <br />
+            <br />
+
             <button className="button   is-link ">
               <Link href="/contact">
                 <a className="navbar-item has-text-white">Contact Mikee</a>
