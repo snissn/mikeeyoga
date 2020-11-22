@@ -45,42 +45,34 @@ function MyApp({ Component, pageProps }) {
             <br />
 
             <button className="button   is-link ">
-                <a className="navbar-item has-text-white">Schedule</a>
-
+              <a className="  has-text-white">Schedule</a>
             </button>
             <br />
             <br />
 
             <button className="button   is-link ">
-            <span className="icon">
+              <span className="icon">
                 <i className="fab fa-youtube" />
               </span>
-                <a className="navbar-item has-text-white">Youtube Classes</a>
-
+              <a className="  has-text-white">Youtube Classes</a>
             </button>
             <br />
             <br />
 
             <button className="button   is-link ">
-
-                <a className="navbar-item has-text-white">Events</a>
-
+              <a className="  has-text-white">Events</a>
             </button>
             <br />
             <br />
 
             <button className="button   is-link ">
-
-                <a className="navbar-item has-text-white">Bio</a>
-
+              <a className="  has-text-white">Bio</a>
             </button>
             <br />
             <br />
 
             <button className="button   is-link ">
-
-                <a className="navbar-item has-text-white">Contact Mikee</a>
-
+              <a className="   has-text-white">Contact Mikee</a>
             </button>
           </p>
         </div>
