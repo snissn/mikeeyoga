@@ -13,8 +13,11 @@
   "author": "Jake Varness",
   "license": "MIT",
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^14.1.2",
+    "@contentful/rich-text-react-renderer": "^14.1.2",
     "@zeit/next-sass": "^1.0.1",
     "bulma": "^0.7.5",
+    "contentful": "^7.14.14",
     "es6-promise": "^4.2.8",
     "isomorphic-fetch": "^2.2.1",
     "jimp": "^0.16.1",
