@@ -1,9 +1,6 @@
-export default () => (
-    <section className="section">
-        <div className="container">
-            <h1 className="title">
-                <p>Schedule Coming Soon</p>
+import React, { Component, useState, useEffect } from "react";
+import Contentful from "../components/Contentful";
 
-            </h1></div>
-    </section>
-)
+export default () => {
+  return <Contentful name={"schedule"} />;
+};

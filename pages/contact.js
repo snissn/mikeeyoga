@@ -1,9 +1,6 @@
-export default () => (
-    <section className="section">
-        <div className="container">
-            <h1 className="title">
-                <p>The best way to contact Mikee is through the instagram link below</p>
+import React, { Component, useState, useEffect } from "react";
+import Contentful from "../components/Contentful";
 
-            </h1></div>
-    </section>
-)
+export default () => {
+  return <Contentful name={"contact"} />;
+};
